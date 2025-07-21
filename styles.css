@@ -1181,6 +1181,32 @@ body {
     margin: 0;
 }
 
+/* Mobile Navigation Toggle */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        z-index: 999;
+        transition: all 0.3s ease;
+    }
+    .nav-menu.open {
+        display: flex;
+    }
+    .nav-link {
+        padding: 16px;
+        border-bottom: 1px solid #e5e7eb;
+        width: 100%;
+        text-align: left;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
