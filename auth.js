@@ -304,59 +304,57 @@ document.addEventListener('DOMContentLoaded', function() {
         return 'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
     }
     
-    // Auto-fill demo data buttons (for testing purposes)
-    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-        // Demo login button
-        const demoLoginButton = document.createElement('button');
-        demoLoginButton.type = 'button';
-        demoLoginButton.className = 'btn btn-secondary';
-        demoLoginButton.textContent = 'Demo Login';
-        demoLoginButton.style.marginBottom = '20px';
-        demoLoginButton.addEventListener('click', function() {
-            loginEmailInput.value = 'demo@azoomrental.com';
-            loginPasswordInput.value = 'demo123';
-        });
+    // Always show demo data buttons (for testing purposes)
+    // Demo login button
+    const demoLoginButton = document.createElement('button');
+    demoLoginButton.type = 'button';
+    demoLoginButton.className = 'btn btn-secondary';
+    demoLoginButton.textContent = 'Demo Login';
+    demoLoginButton.style.marginBottom = '20px';
+    demoLoginButton.addEventListener('click', function() {
+        loginEmailInput.value = 'demo@azoomrental.com';
+        loginPasswordInput.value = 'demo123';
+    });
+    
+    // Demo signup button
+    const demoSignupButton = document.createElement('button');
+    demoSignupButton.type = 'button';
+    demoSignupButton.className = 'btn btn-secondary';
+    demoSignupButton.textContent = 'Demo Signup';
+    demoSignupButton.style.marginBottom = '20px';
+    demoSignupButton.addEventListener('click', function() {
+        signupFirstNameInput.value = 'John';
+        signupLastNameInput.value = 'Doe';
+        signupEmailInput.value = 'demo1@azoomrental.com';
+        signupPhoneInput.value = '(+65) 123-4567';
+        signupPasswordInput.value = 'SecurePass123!';
+        confirmPasswordInput.value = 'SecurePass123!';
+        licenseNumberInput.value = 'DL123456789';
+        agreeTermsCheckbox.checked = true;
         
-        // Demo signup button
-        const demoSignupButton = document.createElement('button');
-        demoSignupButton.type = 'button';
-        demoSignupButton.className = 'btn btn-secondary';
-        demoSignupButton.textContent = 'Demo Signup';
-        demoSignupButton.style.marginBottom = '20px';
-        demoSignupButton.addEventListener('click', function() {
-            signupFirstNameInput.value = 'John';
-            signupLastNameInput.value = 'Doe';
-            signupEmailInput.value = 'demo1@azoomrental.com';
-            signupPhoneInput.value = '(+65) 123-4567';
-            signupPasswordInput.value = 'SecurePass123!';
-            confirmPasswordInput.value = 'SecurePass123!';
-            licenseNumberInput.value = 'DL123456789';
-            agreeTermsCheckbox.checked = true;
-            
-            // Trigger password strength check
-            signupPasswordInput.dispatchEvent(new Event('input'));
-            confirmPasswordInput.dispatchEvent(new Event('input'));
-        });
-        
-        loginFormElement.insertBefore(demoLoginButton, loginFormElement.firstChild);
-        signupFormElement.insertBefore(demoSignupButton, signupFormElement.firstChild);
-        
-        // Create demo user if it doesn't exist
-        const users = JSON.parse(localStorage.getItem('azoomUsers') || '[]');
-        if (!users.find(u => u.email === 'demo@azoomrental.com')) {
-            const demoUser = {
-                id: 'demo_user_001',
-                firstName: 'Demo',
-                lastName: 'User',
-                email: 'demo@azoomrental.com',
-                phone: '(+65) 000-0000',
-                password: 'demo123',
-                licenseNumber: 'DEMO123456',
-                createdAt: new Date().toISOString(),
-                isVerified: true
-            };
-            users.push(demoUser);
-            localStorage.setItem('azoomUsers', JSON.stringify(users));
-        }
+        // Trigger password strength check
+        signupPasswordInput.dispatchEvent(new Event('input'));
+        confirmPasswordInput.dispatchEvent(new Event('input'));
+    });
+    
+    loginFormElement.insertBefore(demoLoginButton, loginFormElement.firstChild);
+    signupFormElement.insertBefore(demoSignupButton, signupFormElement.firstChild);
+    
+    // Create demo user if it doesn't exist
+    const users = JSON.parse(localStorage.getItem('azoomUsers') || '[]');
+    if (!users.find(u => u.email === 'demo@azoomrental.com')) {
+        const demoUser = {
+            id: 'demo_user_001',
+            firstName: 'Demo',
+            lastName: 'User',
+            email: 'demo@azoomrental.com',
+            phone: '(+65) 000-0000',
+            password: 'demo123',
+            licenseNumber: 'DEMO123456',
+            createdAt: new Date().toISOString(),
+            isVerified: true
+        };
+        users.push(demoUser);
+        localStorage.setItem('azoomUsers', JSON.stringify(users));
     }
 });
