@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AZoom Car Rental</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-bolt"></i>
+                <span>AZoom</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="reserve.html" class="nav-link">Reserve</a></li>
+                <li><a href="return.html" class="nav-link">Return</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link login-btn active">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="auth-page">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-form" id="loginForm">
+                    <div class="auth-header">
+                        <h1>Welcome Back</h1>
+                        <p>Sign in to your AZoom account</p>
+                    </div>
+                    
+                    <form id="loginFormElement">
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address</label>
+                            <input type="email" id="loginEmail" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" name="password" required>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="rememberMe">
+                                Remember me
+                            </label>
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">Sign In</button>
+                    </form>
+                    
+                    <div class="auth-footer">
+                        <p>Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+                    </div>
+                </div>
+
+                <div class="auth-form" id="signupForm" style="display: none;">
+                    <div class="auth-header">
+                        <h1>Create Account</h1>
+                        <p>Join AZoom for premium electric car rentals</p>
+                    </div>
+                    
+                    <form id="signupFormElement">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="signupFirstName">First Name</label>
+                                <input type="text" id="signupFirstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signupLastName">Last Name</label>
+                                <input type="text" id="signupLastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signupEmail">Email Address</label>
+                            <input type="email" id="signupEmail" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signupPhone">Phone Number</label>
+                            <input type="tel" id="signupPhone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" name="password" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="licenseNumber">Driver's License Number</label>
+                            <input type="text" id="licenseNumber" name="licenseNumber" required>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="agreeTerms" required>
+                                I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">Create Account</button>
+                    </form>
+                    
+                    <div class="auth-footer">
+                        <p>Already have an account? <a href="#" id="showLogin">Sign in</a></p>
+                    </div>
+                </div>
+
+                <div class="auth-benefits">
+                    <h2>Why Join AZoom?</h2>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <i class="fas fa-zap"></i>
+                            <div>
+                                <h3>Faster Reservations</h3>
+                                <p>Save your preferences and book cars in seconds</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-history"></i>
+                            <div>
+                                <h3>Rental History</h3>
+                                <p>Track all your past and upcoming rentals</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <h3>Exclusive Offers</h3>
+                                <p>Get access to member-only discounts and deals</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <h3>Priority Support</h3>
+                                <p>Dedicated customer service for members</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>AZoom</span>
+                    </div>
+                    <p>Leading the future of sustainable transportation with premium electric car rentals.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="reserve.html">Reserve</a></li>
+                        <li><a href="return.html">Return</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@azoomrental.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Electric Ave, Green City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AZoom Car Rental. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

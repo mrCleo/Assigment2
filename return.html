@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Car - AZoom Car Rental</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-bolt"></i>
+                <span>AZoom</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="reserve.html" class="nav-link">Reserve</a></li>
+                <li><a href="return.html" class="nav-link active">Return</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="return-page">
+        <div class="container">
+            <h1>Return Your Car</h1>
+            <p class="page-description">Complete your rental return process and find the nearest drop-off location.</p>
+            
+            <div class="return-container">
+                <div class="return-form">
+                    <form id="returnForm">
+                        <div class="form-section">
+                            <h2>Rental Information</h2>
+                            <div class="form-group">
+                                <label for="confirmationNumber">Confirmation Number</label>
+                                <input type="text" id="confirmationNumber" name="confirmationNumber" placeholder="AZ-2025-001234" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="returnDate">Return Date</label>
+                                    <input type="date" id="returnDate" name="returnDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="returnTime">Return Time</label>
+                                    <input type="time" id="returnTime" name="returnTime" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h2>Vehicle Condition</h2>
+                            <div class="form-group">
+                                <label for="mileage">Current Mileage</label>
+                                <input type="number" id="mileage" name="mileage" placeholder="12,345" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="batteryLevel">Battery Level (%)</label>
+                                <input type="number" id="batteryLevel" name="batteryLevel" min="0" max="100" placeholder="85" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="condition">Vehicle Condition</label>
+                                <select id="condition" name="condition" required>
+                                    <option value="">Select condition</option>
+                                    <option value="excellent">Excellent - No issues</option>
+                                    <option value="good">Good - Minor wear</option>
+                                    <option value="fair">Fair - Some damage</option>
+                                    <option value="poor">Poor - Significant damage</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="notes">Additional Notes (Optional)</label>
+                                <textarea id="notes" name="notes" rows="4" placeholder="Any additional comments about the vehicle condition or your rental experience..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h2>Return Location</h2>
+                            <div class="form-group">
+                                <label for="returnLocation">Select Return Location</label>
+                                <select id="returnLocation" name="returnLocation" required>
+                                    <option value="">Choose a location</option>
+                                    <option value="main-office">Main Office - 123 Electric Ave</option>
+                                    <option value="downtown-garage">Downtown Garage - 456 City Center</option>
+                                    <option value="airport-lot">Airport Parking Lot - Terminal 2</option>
+                                    <option value="mall-parking">Shopping Mall - West Parking</option>
+                                    <option value="hotel-district">Hotel District - Grand Plaza</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Complete Return Process</button>
+                    </form>
+                </div>
+
+                <div class="return-info">
+                    <div class="info-card">
+                        <h3>Return Locations</h3>
+                        <div class="location-list">
+                            <div class="location-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Main Office</strong>
+                                    <p>123 Electric Ave, Green City<br>24/7 Access</p>
+                                </div>
+                            </div>
+                            <div class="location-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Downtown Garage</strong>
+                                    <p>456 City Center, Green City<br>6:00 AM - 10:00 PM</p>
+                                </div>
+                            </div>
+                            <div class="location-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Airport Parking</strong>
+                                    <p>Terminal 2, Green City Airport<br>24/7 Access</p>
+                                </div>
+                            </div>
+                            <div class="location-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Shopping Mall</strong>
+                                    <p>West Parking, Green Mall<br>8:00 AM - 11:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Return Guidelines</h3>
+                        <ul class="guidelines-list">
+                            <li><i class="fas fa-check"></i> Return with at least 20% battery charge</li>
+                            <li><i class="fas fa-check"></i> Remove all personal belongings</li>
+                            <li><i class="fas fa-check"></i> Return keys to designated drop box</li>
+                            <li><i class="fas fa-check"></i> Take photos of any existing damage</li>
+                            <li><i class="fas fa-check"></i> Complete return form online</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Need Help?</h3>
+                        <p>Contact our 24/7 support team:</p>
+                        <div class="contact-info">
+                            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                            <p><i class="fas fa-envelope"></i> support@azoomrental.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>AZoom</span>
+                    </div>
+                    <p>Leading the future of sustainable transportation with premium electric car rentals.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="reserve.html">Reserve</a></li>
+                        <li><a href="return.html">Return</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@azoomrental.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Electric Ave, Green City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AZoom Car Rental. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="return.js"></script>
+</body>
+</html>

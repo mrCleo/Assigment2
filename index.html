@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZoom Car Rental - Electric Car Rentals</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-bolt"></i>
+                <span>AZoom</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="reserve.html" class="nav-link">Reserve</a></li>
+                <li><a href="return.html" class="nav-link">Return</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Drive Electric, Drive Future</h1>
+                <p>Experience premium electric car rentals with AZoom. Sustainable, efficient, and luxurious transportation for your every need.</p>
+                <div class="hero-buttons">
+                    <a href="reserve.html" class="btn btn-primary">Reserve Now</a>
+                    <a href="#fleet" class="btn btn-secondary">View Fleet</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Electric Car">
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2>Why Choose AZoom?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-leaf"></i>
+                        <h3>100% Electric</h3>
+                        <p>Zero emissions, maximum performance. All our vehicles are premium electric cars.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Flexible Rental</h3>
+                        <p>Daily, weekly, or monthly rentals to suit your schedule and budget.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-credit-card"></i>
+                        <h3>Easy Payment</h3>
+                        <p>Secure online payments with all major credit cards accepted.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Convenient Return</h3>
+                        <p>Multiple designated car parks for easy and flexible returns.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fleet Section -->
+        <section id="fleet" class="fleet">
+            <div class="container">
+                <h2>Our Electric Fleet</h2>
+                <div class="fleet-grid">
+                    <div class="car-card">
+                        <img src="https://images.pexels.com/photos/3802508/pexels-photo-3802508.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tesla Model 3">
+                        <div class="car-info">
+                            <h3>Tesla Model 3</h3>
+                            <p class="car-specs">Range: 358 miles | 0-60: 5.3s</p>
+                            <div class="car-pricing">
+                                <span class="price">$89/day</span>
+                                <span class="price-weekly">$549/week</span>
+                                <span class="price-monthly">$1,999/month</span>
+                            </div>
+                            <a href="reserve.html?car=tesla-model-3" class="btn btn-primary">Reserve</a>
+                        </div>
+                    </div>
+                    <div class="car-card">
+                        <img src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=600" alt="BMW i4">
+                        <div class="car-info">
+                            <h3>BMW i4</h3>
+                            <p class="car-specs">Range: 270 miles | 0-60: 5.7s</p>
+                            <div class="car-pricing">
+                                <span class="price">$95/day</span>
+                                <span class="price-weekly">$599/week</span>
+                                <span class="price-monthly">$2,199/month</span>
+                            </div>
+                            <a href="reserve.html?car=bmw-i4" class="btn btn-primary">Reserve</a>
+                        </div>
+                    </div>
+                    <div class="car-card">
+                        <img src="https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Audi e-tron">
+                        <div class="car-info">
+                            <h3>Audi e-tron GT</h3>
+                            <p class="car-specs">Range: 238 miles | 0-60: 3.9s</p>
+                            <div class="car-pricing">
+                                <span class="price">$129/day</span>
+                                <span class="price-weekly">$799/week</span>
+                                <span class="price-monthly">$2,899/month</span>
+                            </div>
+                            <a href="reserve.html?car=audi-etron" class="btn btn-primary">Reserve</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Reserve Online</h3>
+                        <p>Choose your car, dates, and complete your reservation with secure payment.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Pick Up</h3>
+                        <p>Visit our rental office to collect your keys and complete the rental process.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Enjoy the Ride</h3>
+                        <p>Experience the smooth, quiet, and efficient drive of premium electric vehicles.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Return</h3>
+                        <p>Drop off your car at any of our designated car parks when you're done.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>AZoom</span>
+                    </div>
+                    <p>Leading the future of sustainable transportation with premium electric car rentals.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="reserve.html">Reserve</a></li>
+                        <li><a href="return.html">Return</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i>+65 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@azoomrental.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Electric Ave, Singapore</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AZoom Car Rental. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

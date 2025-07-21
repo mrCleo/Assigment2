@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve - AZoom Car Rental</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-bolt"></i>
+                <span>AZoom</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="reserve.html" class="nav-link active">Reserve</a></li>
+                <li><a href="return.html" class="nav-link">Return</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="reserve-page">
+        <div class="container">
+            <h1>Reserve Your Electric Car</h1>
+            
+            <div class="reservation-container">
+                <div class="reservation-form">
+                    <form id="reservationForm">
+                        <div class="form-section">
+                            <h2>Select Your Car</h2>
+                            <div class="car-selection">
+                                <div class="car-option" data-car="tesla-model-3" data-price-daily="89" data-price-weekly="549" data-price-monthly="1999">
+                                    <img src="https://images.pexels.com/photos/3802508/pexels-photo-3802508.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Tesla Model 3">
+                                    <div class="car-details">
+                                        <h3>Tesla Model 3</h3>
+                                        <p>Range: 358 miles | 0-60: 5.3s</p>
+                                        <div class="pricing">
+                                            <span>$89/day | $549/week | $1,999/month</span>
+                                        </div>
+                                    </div>
+                                    <input type="radio" name="selectedCar" value="tesla-model-3" id="tesla">
+                                </div>
+                                
+                                <div class="car-option" data-car="bmw-i4" data-price-daily="95" data-price-weekly="599" data-price-monthly="2199">
+                                    <img src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=300" alt="BMW i4">
+                                    <div class="car-details">
+                                        <h3>BMW i4</h3>
+                                        <p>Range: 270 miles | 0-60: 5.7s</p>
+                                        <div class="pricing">
+                                            <span>$95/day | $599/week | $2,199/month</span>
+                                        </div>
+                                    </div>
+                                    <input type="radio" name="selectedCar" value="bmw-i4" id="bmw">
+                                </div>
+                                
+                                <div class="car-option" data-car="audi-etron" data-price-daily="129" data-price-weekly="799" data-price-monthly="2899">
+                                    <img src="https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Audi e-tron GT">
+                                    <div class="car-details">
+                                        <h3>Audi e-tron GT</h3>
+                                        <p>Range: 238 miles | 0-60: 3.9s</p>
+                                        <div class="pricing">
+                                            <span>$129/day | $799/week | $2,899/month</span>
+                                        </div>
+                                    </div>
+                                    <input type="radio" name="selectedCar" value="audi-etron" id="audi">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h2>Rental Details</h2>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="rentalType">Rental Type</label>
+                                    <select id="rentalType" name="rentalType" required>
+                                        <option value="">Select rental type</option>
+                                        <option value="daily">Daily</option>
+                                        <option value="weekly">Weekly</option>
+                                        <option value="monthly">Monthly</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="quantity">Duration</label>
+                                    <input type="number" id="quantity" name="quantity" min="1" max="12" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="startDate">Start Date</label>
+                                    <input type="date" id="startDate" name="startDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="endDate">End Date</label>
+                                    <input type="date" id="endDate" name="endDate" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h2>Personal Information</h2>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="licenseNumber">Driver's License Number</label>
+                                <input type="text" id="licenseNumber" name="licenseNumber" required>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h2>Payment Information</h2>
+                            <div class="form-group">
+                                <label for="cardNumber">Card Number</label>
+                                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiryDate">Expiry Date</label>
+                                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cardName">Name on Card</label>
+                                <input type="text" id="cardName" name="cardName" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Complete Reservation</button>
+                    </form>
+                </div>
+
+                <div class="reservation-summary">
+                    <div class="summary-card">
+                        <h3>Reservation Summary</h3>
+                        <div id="summaryContent">
+                            <p>Please select a car and rental details to see your summary.</p>
+                        </div>
+                        <div class="total-section" id="totalSection" style="display: none;">
+                            <div class="total-row">
+                                <span>Subtotal:</span>
+                                <span id="subtotal">$0</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Tax (8.5%):</span>
+                                <span id="tax">$0</span>
+                            </div>
+                            <div class="total-row total">
+                                <span>Total:</span>
+                                <span id="total">$0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>AZoom</span>
+                    </div>
+                    <p>Leading the future of sustainable transportation with premium electric car rentals.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="reserve.html">Reserve</a></li>
+                        <li><a href="return.html">Return</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@azoomrental.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Electric Ave, Green City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AZoom Car Rental. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="reserve.js"></script>
+</body>
+</html>
