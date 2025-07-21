@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
     demoButton.style.marginBottom = '20px';
     demoButton.addEventListener('click', function() {
         confirmationNumberInput.value = 'AZ-2025-123456';
-        mileageInput.value = '12,345';
+        mileageInput.value = '123';
         batteryLevelInput.value = '85';
         conditionSelect.value = 'excellent';
         returnLocationSelect.value = 'main-office';
