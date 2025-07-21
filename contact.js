@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return `${prefix}-${timestamp}-${random}`;
     }
     
-    // Auto-fill demo data button (for testing purposes)
+    // Always show demo data button (for testing purposes)
     const demoButton = document.createElement('button');
     demoButton.type = 'button';
     demoButton.className = 'btn btn-secondary';
@@ -182,8 +182,6 @@ document.addEventListener('DOMContentLoaded', function() {
         messageTextarea.dispatchEvent(new Event('input'));
     });
     
-    // Add demo button to form (only in development)
-    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-        contactForm.insertBefore(demoButton, contactForm.firstChild);
-    }
+    // Add demo button to form (always show in any environment)
+    contactForm.insertBefore(demoButton, contactForm.firstChild);
 });

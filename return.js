@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000);
     });
     
-    // Auto-fill demo data button (for testing purposes)
+    // Always show demo data button (for testing purposes)
     const demoButton = document.createElement('button');
     demoButton.type = 'button';
     demoButton.className = 'btn btn-secondary';
@@ -191,8 +191,6 @@ document.addEventListener('DOMContentLoaded', function() {
         notesTextarea.value = 'Great experience with the Tesla Model 3. Very smooth and quiet ride.';
     });
     
-    // Add demo button to form (only in development)
-    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-        returnForm.insertBefore(demoButton, returnForm.firstChild);
-    }
+    // Add demo button to form (always show in any environment)
+    returnForm.insertBefore(demoButton, returnForm.firstChild);
 });
