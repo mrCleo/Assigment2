@@ -1196,7 +1196,7 @@ body {
         z-index: 999;
         transition: all 0.3s ease;
     }
-    .nav-menu.open {
+    .nav-menu.active {
         display: flex;
     }
     .nav-link {
